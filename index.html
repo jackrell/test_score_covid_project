@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Test Score Pandemic</title>
+    <style>
+        .jumbotron {
+  background-image: url("https://img.freepik.com/free-vector/medical-background-with-abstract-virus-cells-global-pandemic_1048-12124.jpg?w=2000");
+  background-size: cover;
+}
+</style>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Test Score Pandemic</h1>
+        <p class="lead">How did the pandemic and its lasting effects on schools impact nationwide test scores? Scroll to learn more.</p>
+      </div>
+    </div>
+    <div class="container" id="bsr-wrapper">
+      <div class='py-3 my-4'></div>
+      <h1>Context</h1>
+      <div class='py-3 my-4'></div>
+      <iframe src="choro.html" width="100%" height="800" frameBorder="0"></iframe>
+      <div class='py-3 my-4'></div>
+      <picture>
+        <source srcset="context_math_by_state.png" type="image/svg+xml"><img src="context_math_by_state.png" width="100%" height="auto" class="mx-auto d-block" alt="Responsive image">
+      </picture>
+      <div class='my-5'></div>
+      <picture>
+        <source srcset="percent_drop_state.png" type="image/svg+xml"><img src="percent_drop_state.png" width="100%" height="auto" class="mx-auto d-block" alt="Responsive image">
+      </picture>
+      <div class='py-3 my-4'></div>
+      <p>The first vizualization is an animated timeseries choropleth that shows COVID case density over time for each state. Here, COVID case density is defined as cases per 100k population. As one can see, the cases get more intense in different states at different time periods, but most tend to spike in the end of 2020, the middle of 2021, and late 2021 to early 2022. These dates fall between the National Assessment of Educational Progress (NAEP) test score measurements, which are taken in 2019 and 2022. It is interesting to initially note that every single state in the US suffers a fall in student test scores (specifically in math, which had the most substantial data) during this period, as seen in the second vizualization. The third visualization serves to better demonstrate this drop, as the national average drop is plotted along with the individual state percentage drop, which is significant enough to demonstrate a real issue in the greater US. Could it be due to COVID?</p>
+      <div class='py-3 my-5'></div>
+      <h1>Extreme Trend Comparison</h1>
+      <div class='my-5'></div>
+      <p>In this section, we focus in on some of the states that suffered the highest drop in test scores, as well as some of the states that only suffered a low drop, comparing two states' COVID case density over time in a scatterplot fashion.</p>
+      <div class='my-5'></div>
+      <div class="row">
+        <div class="col"><img src="UT_v_OK.png" width = "700px" height="auto" class="img-fluid mr-auto d-block border-0 rounded-0"></div>
+        <div class="col-md-7">
+          <p>When first looking at the Utah vs. Oklahoma plot, it is interesting to note that at a glance, the COVID trends over time are very nearly the same. Despite this, however, some insights can still be gleaned. First, Utah first had a significant spike prior to Oklahoma have a similar spike near the end of 2020. This could suggest that perhaps students in Utah became accustomed to studying during pandemic life prior to Oklahoma students. That could explain why, despite the fact that Utah ultimately reached a higher peak case density, the drop in scores was in the top three lowest while Oklahoma was top three highest. </p>
+        </div>
+      </div>
+      <div class='my-5'></div>
+      <div class="row">
+        <div class="col-md-7">
+          <p>Alaska vs. Delaware demonstrates something similar to the Utah vs. Oklahoma plot. Both of these plots show an earlier spike in the state that had the lower test score drop between the two. It is also interesting to look at the spike in Alaska scores just before its absolute maximum in beginning of 2022. This spike could have similar implications as discussed above, where students could have felt more comfortable with the effects of COVID at this time, and thus test taking was less affected. Thinking about this conversely, the high COVID case rates could suggest less strict COVID policies, and thus less impact overall on the nature of learning in schools.</p>
+        </div>
+        <div class="col"><img src="AK_v_DE.png" width = "700px" height="auto" class="img-fluid mr-auto d-block border-0 rounded-0 "></div>
+      </div>
+      <div class='my-5'></div>
+      <div class="row">
+        <div class="col"><img src="ID_v_WV.png" width = "700px" height="auto" class="img-fluid mr-auto d-block border-0 rounded-0"></div>
+        <div class="col-md-7">
+          <p>Finally, this last plot of Idaho vs. West Virginia is particularly curious as it seems to contradict the hypothesis proposed in the former two plots. Idaho had the lower drop in scores overall, and also had the lower COVID case density for the most part. It did have the early spike, which is a trend we saw with each of the lower-score-drop states, which could have led to more effective COVID policies in Idaho and thus lower case density in the long run. A graph like this is what was initially expected of the data, but it is interesting that it only holds true for one of the comparisons.</p>
+        </div>
+      </div>
+      <div class='py-3 my-5'></div>
+      <h1>Covid Metric Analysis</h1>
+      <div class='my-5'></div>
+      <iframe src="metrics_fig1.html" width="100%" height="800" frameBorder="0"></iframe>
+      <div class='my-5'></div>
+      <iframe src="metrics_fig2.html" width="100%" height="800" frameBorder="0"></iframe>
+      <div class='my-5'></div>
+      <iframe src="metrics_fig3.html" width="100%" height="800" frameBorder="0"></iframe>
+      <div class='my-5'></div>
+      <p>The above three plots serve to try and find connections between certain COVID metrics per capita for each state and the overall difference in test scores in that state. The first vizualization shows the cumulative cases for each state per capita against the test score difference for each state. This plot demonstrates a slight downtick based on the LOWESS (locally weighted scatterplot smoothing) line. Since the test score drop decreased as cases increased, this could suggest what was mentioned before, that less strict COVID policy led to more cases but also led to less school changes, and a lower score drop. The second plot shows deaths per capita vs the test score difference, and it is interesting that it isn't as much of a downward trend as the cumulative cases graph showed. This could be because, overall, deaths were far less common than cases and thus provided less interesting data. Finally, the third plot shows vaccinations distributed per capita, and this follows the strongest trend of the three, but shows an increase in test score difference as vax distributions increased. This could serve as more evidence to support the hypothesis that stricter COVID policy, which would lead to more vaccinations, was actually harmful to students in schools that would be affected by the policy. </p>
+      <div class='py-3 my-5'></div>
+      <h1>Student Group Analysis</h1>
+      <div class='my-5'></div>
+      <iframe src="sec4_fig1.html" width="100%" height="800" frameBorder="0"></iframe>
+      <div class='my-5'></div>
+      <p>This graph plots the drop in test scores vs cumulative Covid cases per capita with 4 cohorts. Each cohort is the group in that state with the specified parental education level. While there is limited correlation between the amount of Covid cases and drop in test score, one substantial observation is that students with college graduate parents had the lowest variance on a state by state basis, staying the closest to the center of the group with very few outliers. This could imply that students with well educated parents were affected very similarly by Covid-19, while students with educated parents were much more susceptible to being affected by factors that varied on a state by state basis.</p>
+      <div class='my-5'></div>
+      <iframe src="sec4_fig2.html" width="100%" height="800" frameBorder="0"></iframe>
+      <div class='my-5'></div>
+      <p>This graph plots the drop in test scores vs cumulative Covid cases per capita with cohorts based on their National School Lunch Program eligibility. In both groups, the drop in test scores slightly decreased in states that had more Covid cases per capita, but there was also a notable difference in the two groups when compared together. Students eligible for the National School Lunch Program were actually likely to drop less in test scores than non eligible students. This is interesting because eligibility is likely linked to poverty, so this plot could be indicating that students in poverty could be less affected by Covid-19.</p>
+      <div class='my-5'></div>
+      <iframe src="sec4_fig3.html" width="100%" height="800" frameBorder="0"></iframe>
+      <div class='my-5'></div>
+      <p>This graph plots the drop in test scores vs cumulative Covid cases per capita with cohorts based on student gender. Just like the above graph, in both groups, the drop in test scores slightly decreased in states that had more Covid cases per capita. Once again there was a notable difference between the two groups with the male drop in test score being lower than the female drop in test score. This could begin to indicate that in terms of math education, boys were less affected by Covid-19 than girls.</p>
+      <div class='my-5'></div>
+      <iframe src="sec4_fig4.html" width="100%" height="800" frameBorder="0"></iframe>
+      <div class='my-5'></div>
+      <p>This graph plots the drop in test scores vs cumulative Covid cases per capita with cohorts based on student race. There is very little correlation or statistical significance, as each race seems to be spread out, with outliers in each direction. This would indicate that Covid-19 did not have a notable effect on students based on different ethnicities, and all ethnicities roughly experience a similar decrease in test scores.</p>
+      <div class='py-3 my-5'></div>
+      <div class='py-3 my-5'></div>
+      <p>Project by: Jack Rellinger (jrelling@nd.edu), Jack Decker (jdecker3@nd.edu)        Sources: Covid Act Now API (https://apidocs.covidactnow.org/), Nation's Report Card (https://www.nationsreportcard.gov/api_documentation.aspx) </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
